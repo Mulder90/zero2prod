@@ -1,4 +1,4 @@
-#[actix_web::test]
+#[tokio::test]
 async fn health_check_works() {
     // Arrange
     spawn_app();
@@ -18,5 +18,5 @@ async fn health_check_works() {
 
 fn spawn_app() {
     let server = zero2prod::run().expect("Failed to bind address");
-    let _ = actix_web::rt::spawn(server);
+    let _ = tokio::spawn(server);
 }
