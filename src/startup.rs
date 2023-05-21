@@ -1,5 +1,3 @@
-//! src/startup.rs
-
 use std::net::TcpListener;
 
 use actix_web::{dev::Server, web, App, HttpServer};
